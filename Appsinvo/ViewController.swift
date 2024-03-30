@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
-    var gridItemName = ["Saloon", "Retail", "Mails", "GYM", "Retail", "Grocery", "Saloon", "Retail", "Mails"]
+    var gridItemName = ["Saloon", "Retail", "Mails", "GYM", "Restaurant", "Saloon", "Retail", "Mails", "GYM", "Restaurant"]
     
-    var gridImageName = ["saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3", "saloon", "ic_retail", "mall", "vector_smart_object_1_2"]
+    var gridImageName = ["saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3", "saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
