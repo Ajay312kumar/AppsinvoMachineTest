@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7A5ADB42BB7D27A00E164D9 /* gridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5ADB32BB7D27A00E164D9 /* gridCollectionViewCell.swift */; };
 		B7DCBB6A2BB735CE00381535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DCBB692BB735CE00381535 /* AppDelegate.swift */; };
 		B7DCBB6C2BB735CE00381535 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DCBB6B2BB735CE00381535 /* SceneDelegate.swift */; };
 		B7DCBB6E2BB735CE00381535 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DCBB6D2BB735CE00381535 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7A5ADB32BB7D27A00E164D9 /* gridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7DCBB662BB735CE00381535 /* Appsinvo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsinvo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DCBB692BB735CE00381535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7DCBB6B2BB735CE00381535 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				B7DCBB6B2BB735CE00381535 /* SceneDelegate.swift */,
 				B7DCBB6D2BB735CE00381535 /* ViewController.swift */,
 				B7DCBB6F2BB735CE00381535 /* Main.storyboard */,
+				B7A5ADB32BB7D27A00E164D9 /* gridCollectionViewCell.swift */,
 				B7DCBB7D2BB7453A00381535 /* myCollectionViewCell.swift */,
 				B7DCBB722BB735D000381535 /* Assets.xcassets */,
 				B7DCBB742BB735D000381535 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				B7DCBB6E2BB735CE00381535 /* ViewController.swift in Sources */,
 				B7DCBB6A2BB735CE00381535 /* AppDelegate.swift in Sources */,
+				B7A5ADB42BB7D27A00E164D9 /* gridCollectionViewCell.swift in Sources */,
 				B7DCBB7E2BB7453A00381535 /* myCollectionViewCell.swift in Sources */,
 				B7DCBB6C2BB735CE00381535 /* SceneDelegate.swift in Sources */,
 			);
