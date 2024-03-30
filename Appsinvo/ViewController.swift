@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
+    var gridItemName = ["Saloon", "Retail", "Mails", "GYM", "Retail", "Grocery", "Saloon", "Retail", "Mails"]
+    
+    var gridImageName = ["saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3", "saloon", "ic_retail", "mall", "vector_smart_object_1_2"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,44 +52,38 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Return the number of items based on the collection view
         if collectionView == myCollectionView {
-            return 3 // Number of items for myCollectionView
+            return 3
         } else if collectionView == gridCollectionView {
-            return 9 // Number of items for gridCollectionView
+            return gridItemName.count // Number of items for gridCollectionView
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Configure and return the appropriate cell based on the collection view
         
         if collectionView == myCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionViewCell", for: indexPath) as! myCollectionViewCell
-            // Configure myCollectionViewCell
             return cell
         } else if collectionView == gridCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gridCollectionViewCell", for: indexPath) as! gridCollectionViewCell
-            // Configure gridCollectionViewCell
+            
+            cell.gridName.text = "\(gridItemName[indexPath.item])"
+            cell.gridImageView.image = UIImage(named: "\(gridImageName[indexPath.item])")
             return cell
         }
         
-        // Default return
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Return the size for items based on the collection view
         
         if collectionView == myCollectionView {
-            // Return size for myCollectionView
             return CGSize(width: collectionView.bounds.width, height: 500)
         } else if collectionView == gridCollectionView {
-            // Return size for gridCollectionView
             return CGSize(width: gridCollectionView.bounds.width / 3, height: gridCollectionView.bounds.width / 3)
         }
         
-        // Default return
         return CGSize.zero
     }
     
