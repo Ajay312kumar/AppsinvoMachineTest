@@ -131,6 +131,10 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="359" height="172"/>
+                                                        <connections>
+                                                            <outlet property="imageContainerView" destination="WC6-Qi-K42" id="13c-c6-k9v"/>
+                                                            <outlet property="imgView" destination="DNQ-br-lFp" id="IUV-1x-MXl"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -373,8 +377,10 @@
                         <inset key="imageInsets" minX="0.0" minY="-50" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="bottomView" destination="vhZ-bV-zk6" id="Wbl-m9-QtZ"/>
                         <outlet property="gridCollectionView" destination="Opz-Af-HJu" id="wbG-QH-Mq4"/>
                         <outlet property="myCollectionView" destination="isV-6t-Ozg" id="TcM-Hy-oA0"/>
+                        <outlet property="nextPageController" destination="X8q-GZ-1hY" id="XBb-j3-h0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -468,18 +474,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_logo_color" width="216" height="65"/>
+        <image name="ic_logo_color" width="324" height="97"/>
         <image name="ic_profile" width="21.666666030883789" height="21.666666030883789"/>
-        <image name="ic_retail" width="74" height="74"/>
+        <image name="ic_retail" width="147" height="147"/>
         <image name="location" width="12.333333015441895" height="16.333333969116211"/>
-        <image name="offer" width="1032" height="593"/>
+        <image name="offer" width="774" height="445"/>
         <image name="rounded_rectangle_7" width="28" height="28"/>
-        <image name="shape_1" width="23" height="23"/>
-        <image name="vector_smart_object" width="48" height="48"/>
-        <image name="vector_smart_object_1" width="152" height="152"/>
-        <image name="vector_smart_object_2" width="57" height="57"/>
-        <image name="vector_smart_object_3" width="57" height="57"/>
-        <image name="vector_smart_object_5" width="55" height="45"/>
+        <image name="shape_1" width="60" height="59"/>
+        <image name="vector_smart_object" width="97" height="97"/>
+        <image name="vector_smart_object_1" width="38" height="38"/>
+        <image name="vector_smart_object_2" width="152" height="152"/>
+        <image name="vector_smart_object_3" width="152" height="152"/>
+        <image name="vector_smart_object_5" width="27" height="22"/>
         <image name="vector_smart_object_6" width="7.3333334922790527" height="7.3333334922790527"/>
         <image name="vector_smart_object_7" width="6.6666665077209473" height="7.3333334922790527"/>
         <image name="vector_smart_object_8" width="17.666666030883789" height="17.666666030883789"/>

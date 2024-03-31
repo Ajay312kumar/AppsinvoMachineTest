@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var gridCollectionView: UICollectionView!
     
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var nextPageController: UIPageControl!
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -20,11 +23,21 @@ class ViewController: UIViewController {
     var gridItemName = ["Saloon", "Retail", "Mails", "GYM", "Restaurant", "Saloon", "Retail", "Mails", "GYM", "Restaurant"]
     
     var gridImageName = ["saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3", "saloon", "ic_retail", "mall", "vector_smart_object_1_2", "vector_smart_object_copy_3"]
+    
+    var tutorialData = ["offer","offer","offer"]
+    
+   
+        var currentPage = 0 {
+            didSet {
+                nextPageController.currentPage = currentPage
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        nextPageController.numberOfPages = tutorialData.count
+        bottomView.layer.cornerRadius = 12
+        bottomView.clipsToBounds = true
         
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
@@ -53,7 +66,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == myCollectionView {
-            return 3
+            return tutorialData.count
         } else if collectionView == gridCollectionView {
             return gridItemName.count // Number of items for gridCollectionView
         }
@@ -95,5 +108,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
             return cell
         }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView == myCollectionView {
+            let width = scrollView.frame.width
+            let currentPage = Int((scrollView.contentOffset.x + width / 3) / width)
+            nextPageController.currentPage = currentPage
+        }
+    }
+
 }
 

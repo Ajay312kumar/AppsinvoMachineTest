@@ -9,4 +9,11 @@ import UIKit
 
 class myCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageContainerView: UIView!
+    @IBOutlet weak var imgView: UIImageView!
+    
+    override func awakeFromNib() {
+            super.awakeFromNib()
+           
+        }
 }
