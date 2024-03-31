@@ -17,7 +17,6 @@ class gridCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
             super.awakeFromNib()
             
-            // Set properties for imageBackgroundView
             imageBackgroundView.layer.cornerRadius = 10
             imageBackgroundView.clipsToBounds = true
         }

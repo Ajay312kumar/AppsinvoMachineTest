@@ -35,6 +35,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        intialsetUp()
+    }
+    
+    func intialsetUp() {
         nextPageController.numberOfPages = tutorialData.count
         bottomView.layer.cornerRadius = 12
         bottomView.clipsToBounds = true
@@ -45,10 +50,10 @@ class ViewController: UIViewController {
         
         let gridLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             gridLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-            let cellWidth = (screenWidth - 20) / 4 // Adjust spacing and width as needed
+            let cellWidth = (screenWidth - 20) / 4
             gridLayout.itemSize = CGSize(width: cellWidth, height: cellWidth)
-            gridLayout.minimumInteritemSpacing = 0 // Adjust spacing between items
-            gridLayout.minimumLineSpacing = 0 // Adjust spacing between rows
+            gridLayout.minimumInteritemSpacing = 0
+            gridLayout.minimumLineSpacing = 0
             gridCollectionView.collectionViewLayout = gridLayout
         
         myCollectionView.delegate = self
@@ -56,9 +61,7 @@ class ViewController: UIViewController {
         
         gridCollectionView.delegate = self
         gridCollectionView.dataSource = self
-        
     }
-
 
 }
 
